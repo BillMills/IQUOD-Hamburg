@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>AutoQC 2015</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+    <div id="warning" class="transparent"><span>Hey, Listen! This presentation works THE BEST in Webkit/Blink browsersonly. Sorry about that. Pull requests welcome?</span></div>
+    <article>
+      <section data-bespoke-state="intro" class="intro">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              for the 3rd annual IQuOD Meeting, Hamburg
+            </div>
+          </div>
+          <h1>AutoQC</h1>
+          <h3>A new python framework for large scale data quality control</h3>
+          <div class="byline">
+            <div class="classy">
+              by Bill Mills
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-bespoke-state="jobs" class="jobs">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              physicist & scientific software developer
+            </div>
+          </div>
+          <table>
+            <tr>
+              <td><img src="img/triumf.png"></td>
+              <td><img src="img/cern.png"></td>
+              <td><img src="img/mozilla.png"></td>
+            </tr>
+          </table>
+          <div class="byline">
+            <div class="classy">
+              previously at these fine institutions
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="whatis">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              Part 1:
+            </div>
+          </div>
+          <h3>What is open science?</h3>
+          <div class="unbrokenline"></div>
+        </div>
+      </section>
+
+      <section class="foundations">
+        <div class="content">
+          <div class="unbrokenline"></div>
+          <h2>Open Science methodology</h2> <h2>emphasizes:</h2>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- transparency</h4>
+            <h4>- reuse</h4>
+            <h4>- reproducibility</h4>
+            <h4>- collaboration</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="scicom">
+        <div class="content">
+          <div class="unbrokenline"></div>
+          <h2>The state of</h2> <h2>scientific computing</h2>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- minimal code reuse</h4>
+            <h4>- virtually no training</h4>
+            <h4>- no credit for sw contributions</h4>
+            <h4>- minimal discussion of sw in papers & conferences</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="bigdata">
+        <div class="content">
+          <div class="unbrokenline"></div>
+          <h2>...and then 'big data' happened</h2>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- > O(100k) ocean profiles considered by this group alone</h4>
+            <h4>- Astronomy, genomics & collider physics approaching petabyte scale</h4>
+            <h4>- Ecological modeling</h4>
+            <h4>- Social Sciences --> Digital Humanities</h4>
+            <h4>- ...just to name a few.</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="opportunity">
+        <div class="content">
+          <div class="unbrokenline"></div>
+          <h2>IQuOD can lead the scientific community</h2>
+          <div class="byline">
+            <div class="classy">
+              in two major ways
+            </div>
+          </div>
+          <div class="fake-list">
+            <h4>1. Collaborative coding</h4>
+            <h4>2. Data QC Strategy</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="autoqc">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              Part 2:
+            </div>
+          </div>
+          <h3>Introducing AutoQC</h3>
+          <div class="unbrokenline"></div>
+        </div>
+      </section>
+
+      <section class="challenge">
+        <div class="content">
+          <div class="unbrokenline"></div>
+          <h2>Challenge:</h2>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- Pass or fail ocean profiles based on sanity checks</h4>
+            <h4>- ...simple enough?</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="problems">
+        <div class="content">
+          <div class="unbrokenline"></div>
+          <h2>Problems:</h2>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- Prior Art</h4>
+            <h4>- Scale & Speed</h4>
+            <h4>- Decision Making</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="prior">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              Problem no. 1:
+            </div>
+          </div>
+          <h2>Prior Art</h2>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- you've already written a ton of sanity checks</h4>
+            <h4>- but, they're in C, C++, FORTRAN...</h4>
+            <h4 class='highlight'>- how do we make it easy to combine past work under one roof?</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="priorSolution">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              Solution no. 1:
+            </div>
+          </div>
+          <h2>Modularity First</h2>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- AutoQC is 100% plug & play</h4>
+            <h4>- AutoQC provides standardized WOD unpacking</h4>
+            <h4>- Includes testing framework to ensure code quality</h4>
+            <h4>- Allow me to demonstrate...</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="priorSolution">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              AutoQC Spinoff
+            </div>
+          </div>
+          <h2>Introducing wodpy</h2>
+          <div class="byline">
+            <div class="classy">
+              a python parser for WOD
+            </div>
+          </div>
+          <div class="fake-list">
+            <h4>- supports python 2.7/3.x</h4>
+            <h4>- supports numpy & pandas data formats</h4>
+            <h4>- highly unit tested for reliability</h4>
+            <h4 class='highlight'>- open source & available on PyPI</h4>
+            <code>pip install wodpy</code>
+          </div>
+        </div>
+      </section>      
+
+      <section class="scale">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              Problem no. 2:
+            </div>
+          </div>
+          <h2>Scale & Speed</h2>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- <i>quota</i> alone has > 150k profiles</h4>
+            <h4>- takes ~24h to run AutoQC without parallelization on this laptop</h4>
+            <h4 class='highlight'>- how can we run more tests on more data for cheap?</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="scaleSolution">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              Solution no. 2:
+            </div>
+          </div>
+          <h2>Parallelism First</h2>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- AutoQC easy to parallelize</h4>
+            <h4>- Factored to record qc results before postprocessing</h4>
+            <h4>- Demonstrated on AWS c3.8xLarge cluster:</h4>
+            <h4 class='highlight'>- 150k profiles analyzed in 30 minutes @ $1.68 USD</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="decisions">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              Problem no. 3:
+            </div>
+          </div>
+          <h2>Decision Making</h2>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- No qc test catches all bad profiles</h4>
+            <h4>- All qc tests produce false positives</h4>
+            <h4>- Could some qc tests be redundant?</h4>
+            <h4 class='highlight'>- What is the minimal & optimal combination of qc tests to classify a profile?</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="performance">
+        <div class="content">
+          <div class="unbrokenline"></div>
+          <h2>AutoQC Performance Testing</h2>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- Examine ~150k profiles from NOAA's <i>quota</i> dataset</h4>
+            <h4>- AutoQC currently implements the following QC tests:</h4>
+          </div>
+          <ul class='listly'>
+            <li>Argo_global_range_check</li>
+            <li>Argo_gradient_test</li>
+            <li>Argo_impossible_date_test</li>
+            <li>Argo_impossible_location_test</li>
+            <li>Argo_pressure_increasing_test</li>
+            <li>Argo_regional_range_test</li>
+            <li>Argo_spike_test</li>
+            <li>EN_background_check</li>
+            <li>EN_constant_value_check</li>
+            <li>EN_range_check</li>
+            <li>EN_spike_and_step_check</li>
+            <li>EN_stability_check</li>
+            <li>WOD_gradient_check</li>
+            <li>WOD_range_check</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="decisions">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              Simplest possible combination:
+            </div>
+          </div>
+          <h2>'Or' Everything Together</h2>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- If we flag a profile when any of the underlying tests do so, we find:</h4>
+          </div>
+          <ul class='listly highlight'>
+            <li class='good'>54.8% of bad profiles flagged</li>
+            <li class='good'>90.4% of good profiles passed</li>
+            <li class='bad'>45.2% false negative rate</li>
+            <li class='bad'>9.6% false positive rate</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="decisions">
+        <div class="content" style='width: 600px;'>
+          <div class='imgWrap'>
+            <img class='scaleUp' src='img/test-flags.png'></img>
+          </div>
+          <span class='caption'>To-Do #1: need more QC tests to eliminate zero-flag spike</span>
+        </div>
+      </section>
+
+      <section class="decisions">
+        <div class="content">
+          <div class="unbrokenline"></div>
+          <h2>EN-Background</h2>
+          <div class="byline">
+            <div class="classy">
+              does most of the heavy lifting
+            </div>
+          </div>
+          <div class="fake-list">
+            <p>Compared to a 54.8% flag rate of or'ing everything together, EN-Background produced</p>
+          </div>
+          <ul class='listly highlight'>
+            <li class='good'>49.0% of bad profiles flagged</li>
+            <li class='good'>93.4% of good profiles passed</li>
+            <li class='bad'>51.0% false negative rate</li>
+            <li class='bad'>6.6% false positive rate</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="decisions">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              this begs the question,
+            </div>
+          </div>
+          <h2>Is quota a biased sample?</h2>
+          <div class="unbrokenline"></div>
+          <span class='caption'>To-Do #2: need to better understand origin of flags in <i>quota</i>,</span> 
+          <span class='caption'>to determine if the underlying dataset is biasing these results.</span>
+        </div>
+      </section>
+
+      <section class="decisions">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              Future Plans
+            </div>
+          </div>
+          <h2>Machine Learning</h2>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- Once we hammer out to-do's 1 & 2, we'll need to make final flagging decisions.</h4>
+            <h4>- OR'ing everything together is probably a good start...</h4>
+            <h4 class='highlight'>- The optimal decision strategy will likely be a machine learning algorithm.</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="decisions">
+        <div class="content">
+          <div class="unbrokenline"></div>
+          <h2>Support Vector Machines</h2>
+          <div class="unbrokenline"></div>
+          <img src='img/svm.png' style='width:30%;'></img>
+          <div class="fake-list">
+            <h4>- AutoQC is essentially an attempt to learn a boolean function</h4>
+            <h4>- Ken Sadohara has presented promising work on using SVMs for this purpose</h4>
+            <h4>- scikit-learn provides powerful and easy-to-use tools for doing machine learning in python</h4>
+          </div>
+
+          <ul class='citations'>
+            <li>Figure: <a href='https://www.npmjs.com/package/node-svm'>https://www.npmjs.com/package/node-svm</a></li>
+            <li>Sadohara: <a href='http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.103.7219&rep=rep1&type=pdf'>http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.103.7219&rep=rep1&type=pdf</a></li>
+            <li>scikit-learn: <a href='http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.103.7219&rep=rep1&type=pdf'>http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.103.7219&rep=rep1&type=pdf</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="decisions">
+        <div class="content">
+          <div class="unbrokenline"></div>
+          <h2>Get Involved</h2>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4 class='highlight'>- Help implement more QC tests; it's easy!</h4>
+            <h4>- Help construct a large representative sample of profiles to guage performance on.</h4>
+          </div>
+        </div>
+      </section>
+
+      <section data-bespoke-state="final" class="intro">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              This has been
+            </div>
+          </div>
+          <h1>AutoQC</h1>
+          <div class="byline">
+            <div class="classy">
+              by Bill Mills
+            </div>
+          </div>
+          <h3>@billdoesphysics</h3>
+        </div>
+
+        
+      </section>
+
+    </article>
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Tauri::latin', 'Alegreya:400italic:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })(); 
+    </script>
+    <script src="js/bespoke.js"></script>
+    <script src="js/deck.js"></script>
+    </body>
+</html>
